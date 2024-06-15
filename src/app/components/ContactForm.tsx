@@ -32,7 +32,7 @@ const ContactForm = () => {
     }
 
     return (
-        <form className="p-6 max-w-[800px] bg-dark-chocolate rounded-xl shadow">
+        <form className="p-3 lg:p-6 max-w-[800px] bg-dark-chocolate rounded-xl shadow">
             <section className="flex flex-col items-center gap-y-6">
                 <h1 className="text-center font-bold text-2xl lg:text-4xl text-taxi uppercase leading-relaxed">заполни и получи скидку</h1>
                 <p className="text-center text-xl lg:text-2xl text-neutral-100 leading-relaxed">Таксопарк Шоколад - лучшие условия аренды авто для такси!</p>
