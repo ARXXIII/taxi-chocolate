@@ -1,11 +1,11 @@
 import { CarCard } from "@/app/components"
-import { TaxiPark } from "@/app/constants"
+import { taxiPark } from "@/app/constants"
 
 const Cars = () => {
     return (
         <article>
-            <section className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                {TaxiPark.map((car) => (
+            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                {taxiPark.map((car) => (
                     <CarCard
                         key={car.url}
                         url={car.url}

@@ -1,8 +1,10 @@
+import { ContactForm } from "./components";
+
 export default function Home() {
   return (
     <article>
-      <section className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-
+      <section className='flex justify-center items-center mt-6 lg:mt-12'>
+        <ContactForm />
       </section>
     </article>
   );
