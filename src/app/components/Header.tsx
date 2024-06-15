@@ -15,7 +15,7 @@ const Header = () => {
                     height={50}
                     className="rounded-full bg-taxi p-1"
                 />
-                <h1 className="font-black text-4xl bg-gradient-to-r from-chocolate to-taxi text-transparent bg-clip-text">Таксопарк Шоколад</h1>
+                <h1 className="hidden lg:block font-black text-4xl bg-gradient-to-r from-dark-chocolate via-chocolate to-taxi text-transparent bg-clip-text">Таксопарк Шоколад</h1>
             </Link>
             <Navbar />
         </header>

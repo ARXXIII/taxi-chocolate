@@ -1,15 +1,39 @@
 export const nav = [
-	'Аренда',
-	'Выкуп',
-	'Тарифы',
-	'Таксопарк',
-	'Вопросы и ответы',
-	'Блог',
-	'Отзывы',
-	'Контакты',
+	{
+		name: 'Аренда',
+		address: '/rent',
+	},
+	{
+		name: 'Выкуп',
+		address: '/ransom',
+	},
+	{
+		name: 'Тарифы',
+		address: '/rates',
+	},
+	{
+		name: 'Таксопарк',
+		address: '/cars',
+	},
+	{
+		name: 'Вопросы и ответы',
+		address: '/faq',
+	},
+	{
+		name: 'Блог',
+		address: '/blog',
+	},
+	{
+		name: 'Отзывы',
+		address: '/reviews',
+	},
+	{
+		name: 'Контакты',
+		address: '/contact',
+	},
 ];
 
-export const TaxiPark = [
+export const taxiPark = [
 	{
 		url: 'volkswagen-polo',
 		brand: 'Volkswagen Polo',
