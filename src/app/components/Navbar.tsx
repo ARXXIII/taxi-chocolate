@@ -35,7 +35,7 @@ const Navbar = () => {
                         </Menu>
                     </section>
                 ) : (
-                    <section className="hidden lg:flex justify-center items-center gap-x-6 p-3 font-bold text-xl text-dark-chocolate border-2 border-dark-chocolate bg-taxi rounded-full">
+                    <section className="hidden lg:flex justify-center items-center gap-x-6 p-3 font-bold text-2xl bg-gradient-to-r from-dark-chocolate via-chocolate to-taxi text-transparent bg-clip-text rounded-full">
                         {nav.map((link) => (
                             <Link key={link.name} href={link.address}>{link.name}</Link>
                         ))}
