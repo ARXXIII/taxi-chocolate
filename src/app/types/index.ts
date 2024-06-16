@@ -10,3 +10,8 @@ export interface CarCardProps {
 export interface CarPageProps {
 	params: any;
 }
+
+export interface SalePageProps {
+	sale: boolean;
+	price: number;
+}
