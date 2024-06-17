@@ -1,18 +1,23 @@
 'use client'
 
+import Link from "next/link"
+import { PageHeading } from "@/app/components"
+import { rentInfo, questionsAnswers } from "@/app/constants"
+
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import { rentInfo, questionsAnswers } from "@/app/constants"
-import Link from "next/link"
 
 const Help = () => {
     return (
         <article>
-            <section>
+            <section className='lg:w-full'>
+                <PageHeading heading='Вопросы и ответы' />
+            </section>
+            <section className="mt-6 lg:mt-12">
                 <h1 className="p-3 text-center font-bold text-2xl lg:text-4xl text-taxi tracking-wide bg-dark-chocolate rounded-xl shadow">Подробно об аренде</h1>
                 <div className="grid grid-cols-1 gap-y-6 mt-6 text-xl">
 

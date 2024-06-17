@@ -1,14 +1,17 @@
 import { CiRoute } from "react-icons/ci";
 import { SlCallIn } from "react-icons/sl";
-import { ContactForm } from "@/app/components"
 import { SiMoscowmetro } from "react-icons/si";
 import { IoTimeOutline } from "react-icons/io5";
 import { LiaMapMarkerAltSolid } from "react-icons/lia";
+import { ContactForm, PageHeading } from "@/app/components"
 
 const Contact = () => {
     return (
         <article>
-            <section className="flex flex-col lg:flex-row justify-center gap-6">
+            <section className='lg:w-full'>
+                <PageHeading heading='Контакты' />
+            </section>
+            <section className="flex flex-col lg:flex-row justify-center gap-6 mt-6 lg:mt-12">
                 <div>
                     <h1 className="font-bold text-4xl">Где нас найти</h1>
                     <div className="flex flex-col justify-center gap-y-6 mt-3 p-3 lg:w-fit text-xl text-neutral-100 bg-dark-chocolate rounded-xl shadow">

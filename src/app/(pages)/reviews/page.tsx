@@ -3,7 +3,7 @@ import { Feedback, PageHeading, ReviewForm } from '@/app/components'
 
 const Reviews = () => {
     return (
-        <article className='flex flex-col items-center gap-y-6'>
+        <article className='flex flex-col items-center gap-y-6 lg:gap-y-12'>
             <section className='lg:w-full'>
                 <PageHeading heading='Отзывы' />
             </section>

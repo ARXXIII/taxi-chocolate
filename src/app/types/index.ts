@@ -20,3 +20,7 @@ export interface FeedbackProps {
 	name: string;
 	review: string;
 }
+
+export interface PageHeadingProps {
+	heading: string;
+}

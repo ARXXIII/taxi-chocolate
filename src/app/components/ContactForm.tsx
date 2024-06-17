@@ -1,8 +1,8 @@
 'use client'
 
+import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { useMask } from "@react-input/mask"
-import { cn } from "@/lib/utils"
 
 const ContactForm = () => {
     const [fullName, setFullName] = useState<string>()
@@ -15,7 +15,7 @@ const ContactForm = () => {
         if (!fullName) {
             setTimeout(() => {
                 setInputError('')
-            }, 1300, setInputError('Заполните имя'))
+            }, 1300, setInputError('Введите имя'))
 
             return
         }
@@ -34,7 +34,7 @@ const ContactForm = () => {
     return (
         <form className="p-3 lg:p-6 max-w-[800px] bg-dark-chocolate rounded-xl shadow">
             <section className="flex flex-col items-center gap-y-6">
-                <h1 className="text-center font-bold text-2xl lg:text-4xl text-taxi uppercase leading-relaxed">заполни и получи скидку</h1>
+                <h1 className="text-center font-bold text-2xl lg:text-4xl text-taxi tracking-wide leading-relaxed uppercase">Заполни и получи скидку</h1>
                 <p className="text-center text-xl lg:text-2xl text-neutral-100 leading-relaxed">Таксопарк Шоколад - лучшие условия аренды авто для такси!</p>
             </section>
             <section className="flex flex-col gap-y-6 relative mt-6">
