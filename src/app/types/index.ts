@@ -15,3 +15,8 @@ export interface SalePageProps {
 	sale: boolean;
 	price: number;
 }
+
+export interface FeedbackProps {
+	name: string;
+	review: string;
+}
