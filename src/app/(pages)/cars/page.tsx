@@ -3,11 +3,11 @@ import { CarCard, PageHeading } from "@/app/components"
 
 const Cars = () => {
     return (
-        <article>
+        <article className="grid grid-cols-1 gap-y-6">
             <section className='lg:w-full'>
                 <PageHeading heading='Таксопарк' />
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6 lg:mt-12">
+            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
                 {taxiPark.map((car) => (
                     <CarCard

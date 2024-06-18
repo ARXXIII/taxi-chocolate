@@ -1,8 +1,8 @@
 'use client'
 
-import { ContactForm } from '@/app/components'
 import { CarPageProps } from '@/app/types'
 import { useEffect, useState } from 'react'
+import { ContactForm, List, PageHeading } from '@/app/components'
 
 const Car = ({ params }: CarPageProps) => {
     const [brand, setBrand] = useState<string>('')
@@ -12,6 +12,17 @@ const Car = ({ params }: CarPageProps) => {
     const [sale, setSale] = useState<boolean>(false)
 
     const car_url = params.car
+
+    const carPageList = [
+        {
+            title: 'Преимущества аренды',
+            list: ['Моментальные выплаты', 'Без депозита и без залога', 'Первый день аренды бесплатно', 'Скидка 50% на выходные', 'Большой выбор машин', 'Техническое обслуживание и страховка', 'Официальный партнер «Яндекс Go Такси»'],
+        },
+        {
+            title: 'Требования для аренды',
+            list: ['Стаж по правам более трех лет', 'Российские, белорусские, киргизские и казахстанские водительские права категории «B»', 'Отсутствие судимости'],
+        }
+    ]
 
     const fetchData = async (car_url: string) => {
         try {
@@ -37,87 +48,42 @@ const Car = ({ params }: CarPageProps) => {
     }, [])
 
     return (
-        <article>
-            <section className='flex flex-col-reverse lg:flex-row justify-center items-center gap-y-6 lg:gap-x-6 font-bold text-2xl lg:text-4xl text-neutral-100'>
+        <article className='grid grid-cols-1 gap-6'>
+            <section className='flex justify-between items-center'>
 
                 {brand
                     ? (
-                        <h1 className='p-3 text-center bg-dark-chocolate rounded-xl shadow'>
-                            Аренда <span className='text-taxi'>{brand}</span> для работы в такси от <span className='text-taxi'>{price} &#8381;</span>
-                        </h1>
+                        <PageHeading heading={`Аренда ${brand} для работы в такси`} />
                     )
                     : null
                 }
 
                 {sale
-                    ? (<div className='p-3 w-full lg:w-fit text-center bg-red-600 rounded-xl shadow'>Акция</div>)
+                    ? (<div className='flex justify-center items-center p-3 font-bold text-4xl text-neutral-100 tracking-wide bg-red-600 rounded-xl shadow'>
+                        <p>Акция</p>
+                    </div>)
                     : null
                 }
 
             </section>
-            <section className='flex justify-center'>
+            <section>
 
                 {text
                     ? (
-                        <p className='mt-6 lg:mt-12 lg:w-[850px] p-3 text-center text-xl lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
+                        <p className='lg:w-[850px] p-3 text-xl lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
                     )
                     : null
                 }
 
             </section>
-            <section className='flex flex-col lg:flex-row justify-center gap-y-6 lg:gap-x-12 mt-6 lg:mt-12'>
-                <div className='flex flex-col items-center p-6 lg:min-w-[560px] w-fit bg-dark-chocolate rounded-xl'>
-                    <h1 className='font-bold text-2xl lg:text-4xl text-taxi'>Преимущества аренды:</h1>
-                    <div className='mt-6 grid grid-cols-1 gap-y-6 text-xl lg:text-2xl text-neutral-100'>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Моментальные выплаты</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Без депозита, без залога</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Первый день аренды бесплатно</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Скидка 50% на выходные</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Большой выбор машин</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>ТО + страховка</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Официальный партнер &#171;Яндекс Go Такси&#187;</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex flex-col items-center p-6 lg:min-w-[560px] w-fit bg-dark-chocolate rounded-xl'>
-                    <h1 className='font-bold text-2xl lg:text-4xl text-taxi'>Требования для аренды:</h1>
-                    <div className='mt-6 grid grid-cols-1 gap-y-6 text-xl lg:text-2xl text-neutral-100'>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Стаж по правам более 3-х лет</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p className='w-[400px]'>Российские, белорусские, киргизские и казахстанские водительские права категории &#171;B&#187;</p>
-                        </div>
-                        <div className='flex items-center gap-x-6'>
-                            <div className='w-2 h-2 bg-taxi rounded-full'></div>
-                            <p>Отсутствие судимости</p>
-                        </div>
-                    </div>
-                </div>
+            <section className='grid grid-cols-1 lg:grid-cols-2 justify-center gap-6'>
+
+                {carPageList.map((info, index) => (
+                    <List key={index} title={info.title} list={info.list} />
+                ))}
+
             </section>
-            <section className='flex justify-center items-center mt-6 lg:mt-12'>
+            <section className='flex justify-center items-center'>
                 <ContactForm />
             </section>
         </article>
