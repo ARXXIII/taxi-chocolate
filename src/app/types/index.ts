@@ -1,10 +1,13 @@
 export interface CarCardProps {
-	url: string;
+	url?: string;
 	brand: string;
 	type: string;
 	price: number;
-	text: string;
-	sale: boolean;
+	text?: string;
+	sale?: boolean;
+	ransom?: boolean;
+	contribution?: number;
+	term?: string;
 }
 
 export interface CarPageProps {
@@ -23,4 +26,18 @@ export interface FeedbackProps {
 
 export interface PageHeadingProps {
 	heading: string;
+}
+
+export interface ListProps {
+	title: string;
+	list?: string[];
+	tel?: string;
+}
+
+export interface InfoProps {
+	title: string;
+	subTitle?: string;
+	list?: string[];
+	subList?: string[];
+	tel?: string;
 }
