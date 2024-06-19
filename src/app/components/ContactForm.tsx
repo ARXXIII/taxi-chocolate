@@ -32,12 +32,12 @@ const ContactForm = () => {
     }
 
     return (
-        <form className="p-3 lg:p-6 max-w-[800px] bg-dark-chocolate rounded-xl shadow">
+        <form className="flex flex-col justify-between gap-y-6 p-3 lg:p-6 max-w-[800px] bg-dark-chocolate rounded-xl shadow">
             <section className="flex flex-col items-center gap-y-6">
                 <h1 className="text-center font-bold text-2xl lg:text-4xl text-taxi tracking-wide leading-relaxed uppercase">Заполни и получи скидку</h1>
                 <p className="text-center text-xl lg:text-2xl text-neutral-100 leading-relaxed">Таксопарк Шоколад - лучшие условия аренды авто для такси!</p>
             </section>
-            <section className="flex flex-col gap-y-6 relative mt-6">
+            <section className="flex flex-col gap-y-6 relative">
                 <input
                     type="text"
                     placeholder="ФИО"
@@ -61,7 +61,7 @@ const ContactForm = () => {
             <button
                 onClick={send}
                 type="button"
-                className={cn("mt-6 p-3 w-full text-center font-bold text-2xl bg-taxi rounded-xl active:scale-[0.96] duration-200 ease-in shadow",
+                className={cn("p-3 w-full text-center font-bold text-2xl bg-taxi rounded-xl active:scale-[0.96] duration-200 ease-in shadow",
                     inputError?.length && 'text-neutral-100 bg-rose-500'
                 )}
             >
