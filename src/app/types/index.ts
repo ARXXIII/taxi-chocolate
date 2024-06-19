@@ -1,16 +1,26 @@
 export interface CarCardProps {
 	url?: string;
 	brand: string;
-	type: string;
+	rate: string | undefined;
 	price: number;
 	text?: string;
 	sale?: boolean;
-	ransom?: boolean;
+	ransom?: object;
 	contribution?: number;
 	term?: string;
 }
 
+export interface RateCardProps {
+	url: string;
+	rate: string;
+	description: string;
+}
+
 export interface CarPageProps {
+	params: any;
+}
+
+export interface RatePageProps {
 	params: any;
 }
 
