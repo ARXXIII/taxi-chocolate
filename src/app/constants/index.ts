@@ -33,7 +33,8 @@ export const taxiPark = [
 	{
 		url: 'volkswagen-polo',
 		brand: 'Volkswagen Polo',
-		type: 'Эконом',
+		rate: 'economy',
+		rateDescription: 'эконом',
 		price: 1300,
 		text: 'Volkswagen Polo известен своей надежностью и экономичностью. Это отличный выбор для водителей такси, которые ищут универсальный автомобиль для работы в городе.',
 		sale: true,
@@ -41,7 +42,8 @@ export const taxiPark = [
 	{
 		url: 'skoda-rapid',
 		brand: 'Skoda Rapid',
-		type: 'Эконом',
+		rate: 'economy',
+		rateDescription: 'эконом',
 		price: 1400,
 		text: 'Skoda Rapid предлагает просторный салон и отличную управляемость. Это популярный выбор среди водителей такси благодаря своей надежности и комфорту.',
 		sale: true,
@@ -49,15 +51,31 @@ export const taxiPark = [
 	{
 		url: 'skoda-octavia',
 		brand: 'Skoda Octavia',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 1800,
 		text: 'Skoda Octavia - это выбор профессионалов. С просторным салоном и отличными техническими характеристиками, этот автомобиль обеспечивает комфорт на каждой поездке.',
 		sale: false,
+		ransom: {
+			terms: [
+				{
+					price: 3700,
+					contribution: 0,
+					term: 'на 500 дней',
+				},
+				{
+					price: 2600,
+					contribution: 0,
+					term: 'на 2 года',
+				},
+			],
+		},
 	},
 	{
 		url: 'kia-rio',
 		brand: 'Kia Rio',
-		type: 'Эконом',
+		rate: 'economy',
+		rateDescription: 'эконом',
 		price: 2100,
 		text: 'Kia Rio - это один из самых востребованных автомобилей в такси благодаря своему стильному дизайну, экономичности и надежности.',
 		sale: false,
@@ -65,7 +83,8 @@ export const taxiPark = [
 	{
 		url: 'kia-ceed',
 		brand: 'Kia Ceed',
-		type: 'Эконом',
+		rate: 'economy',
+		rateDescription: 'эконом',
 		price: 2400,
 		text: 'Выберите Kia Ceed для комфортных и безопасных поездок. Этот автомобиль идеально подходит для тех, кто ценит качество и хочет предложить клиентам высокий уровень комфорта.',
 		sale: false,
@@ -73,7 +92,8 @@ export const taxiPark = [
 	{
 		url: 'kia-cerato',
 		brand: 'Kia Cerato',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 2500,
 		text: 'Kia Cerato привлекает своим современным дизайном и технологиями. Это отличный выбор для водителей, стремящихся предоставить своим пассажирам максимальный комфорт.',
 		sale: false,
@@ -81,7 +101,8 @@ export const taxiPark = [
 	{
 		url: 'kia-k5',
 		brand: 'Kia K5',
-		type: 'Комфорт+',
+		rate: 'comfort-plus',
+		rateDescription: 'комфорт+',
 		price: 3800,
 		text: 'Kia K5 – это синоним современного комфорта и стиля. С этим автомобилем каждая поездка будет на высшем уровне.',
 		sale: false,
@@ -89,15 +110,31 @@ export const taxiPark = [
 	{
 		url: 'kia-optima',
 		brand: 'Kia Optima',
-		type: 'Комфорт+',
+		rate: 'comfort-plus',
+		rateDescription: 'комфорт+',
 		price: 2600,
 		text: 'Kia Optima - это сочетание элегантности и практичности. Этот автомобиль идеально подойдет тем, кто ценит комфорт и стиль.',
 		sale: true,
+		ransom: {
+			terms: [
+				{
+					price: 4700,
+					contribution: 0,
+					term: 'на 500 дней',
+				},
+				{
+					price: 3300,
+					contribution: 0,
+					term: 'на 2 года',
+				},
+			],
+		},
 	},
 	{
 		url: 'cherry-tiggo',
 		brand: 'Cherry Tiggo',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 2900,
 		text: 'Cherry Tiggo предлагает превосходное сочетание стиля, комфорта и производительности, делая его идеальным выбором для работы в такси.',
 		sale: false,
@@ -105,7 +142,8 @@ export const taxiPark = [
 	{
 		url: 'moskvich-3',
 		brand: 'Moskvich 3',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 2900,
 		text: 'Откройте для себя надежность и стиль с Moskvich 3. Этот автомобиль сочетает в себе комфорт и эффективное потребление топлива, делая его идеальным выбором для городских поездок.',
 		sale: false,
@@ -113,15 +151,36 @@ export const taxiPark = [
 	{
 		url: 'nissan-qashqai',
 		brand: 'Nissan Qashqai',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 2300,
 		text: 'Nissan Qashqai сочетает в себе простор и мощь SUV с управляемостью и экономичностью седана, что делает его идеальным авто для работы в такси.',
 		sale: false,
+		ransom: {
+			terms: [
+				{
+					price: 4000,
+					contribution: 0,
+					term: 'на 500 дней',
+				},
+				{
+					price: 2800,
+					contribution: 0,
+					term: 'на 2 года',
+				},
+				{
+					price: 2600,
+					contribution: 0,
+					term: 'на 3 года',
+				},
+			],
+		},
 	},
 	{
 		url: 'Gelly-emrand',
 		brand: 'Gelly Emrand',
-		type: 'Комфорт',
+		rate: 'comfort',
+		rateDescription: 'комфорт',
 		price: 3000,
 		text: '',
 		sale: false,
@@ -129,7 +188,8 @@ export const taxiPark = [
 	{
 		url: 'toyota-camry',
 		brand: 'Toyota Camry',
-		type: 'Комфорт+',
+		rate: 'comfort-plus',
+		rateDescription: 'комфорт+',
 		price: 3300,
 		text: 'Toyota Camry давно зарекомендовала себя как выбор номер один для тех, кто ищет надежность, комфорт и престиж в одном автомобиле.',
 		sale: false,
@@ -137,7 +197,8 @@ export const taxiPark = [
 	{
 		url: 'hyundai-sonata',
 		brand: 'Hyundai Sonata',
-		type: 'Комфорт+',
+		rate: 'comfort-plus',
+		rateDescription: 'комфорт+',
 		price: 3700,
 		text: 'Hyundai Sonata привлекает водителей такси своим просторным салоном, современным дизайном и отличной экономичностью.',
 		sale: false,
@@ -145,62 +206,32 @@ export const taxiPark = [
 	{
 		url: 'jac-j7',
 		brand: 'Jac J7',
-		type: 'Комфорт+',
+		rate: 'comfort-plus',
+		rateDescription: 'комфорт+',
 		price: 2800,
 		text: '',
 		sale: false,
 	},
 ];
 
-export const ransomCars = [
+export const rates = [
 	{
-		brand: 'Nissan Qashqai',
-		type: 'Комфорт',
-		price: 4000,
-		contribution: 0,
-		term: 'на 500 дней',
+		url: 'economy',
+		rate: 'Эконом',
+		description:
+			'Для тех, кто ищет доступную аренду авто под такси, тариф «Эконом» - идеальный выбор. Это отличный вариант для начинающих водителей такси, желающих взять авто в аренду под такси в Москве по низкой цене. Этот тариф включает в себя современные, экономичные автомобили, которые идеально подходят для работы в такси, обеспечивая высокую эффективность топлива и комфорт для Ваших пассажиров.',
 	},
 	{
-		brand: 'Nissan Qashqai',
-		type: 'Комфорт',
-		price: 2800,
-		contribution: 0,
-		term: 'на 2 года',
+		url: 'comfort',
+		rate: 'Комфорт',
+		description:
+			'Тариф «Комфорт» предлагает автомобили повышенного уровня комфорта для тех водителей, кто хочет предложить своим клиентам что-то особенное. Эти автомобили под такси обеспечивают исключительный уровень комфорта и стиля, делая каждую поездку приятной и расслабляющей. Выбирая аренду такси комфорт класса в Москве, Вы получаете превосходное качество по доступной цене.',
 	},
 	{
-		brand: 'Nissan Qashqai',
-		type: 'Комфорт',
-		price: 2600,
-		contribution: 0,
-		term: 'на 3 года',
-	},
-	{
-		brand: 'Skoda Octavia',
-		type: 'Комфорт',
-		price: 3700,
-		contribution: 0,
-		term: 'на 500 дней',
-	},
-	{
-		brand: 'Skoda Octavia',
-		type: 'Комфорт',
-		price: 2600,
-		contribution: 0,
-		term: 'на 2 года',
-	},
-	{
-		brand: 'Kia Optima',
-		type: 'Комфорт+',
-		price: 4700,
-		contribution: 0,
-		term: 'на 500 дней',
-	},
-	{
-		brand: 'Kia Optima',
-		type: 'Комфорт+',
-		price: 3300,
-		contribution: 0,
-		term: 'на 2 года',
+		url: 'comfort-plus',
+		rate: 'Комфорт+',
+		description:
+			'Тариф «Комфорт+» предназначен для водителей, стремящихся предоставить максимально комфортные условия своим пассажирам. В этом сегменте мы предлагаем автомобили высшего класса, которые являются вершиной комфорта и роскоши. Арендуя такси “Комфорт +” в Москве, Вы обеспечиваете своим пассажирам незабываемый опыт поездки.',
 	},
 ];
 
