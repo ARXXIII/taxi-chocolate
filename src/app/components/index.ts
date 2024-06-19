@@ -6,6 +6,7 @@ import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CarCard from './CarCard';
+import RateCard from './RateCard';
 import Feedback from './Feedback';
 import ReviewForm from './ReviewForm';
 import ContactForm from './ContactForm';
@@ -21,6 +22,7 @@ export {
 	Navbar,
 	Footer,
 	CarCard,
+	RateCard,
 	Feedback,
 	ReviewForm,
 	ContactForm,
