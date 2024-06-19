@@ -14,7 +14,7 @@ const Cars = () => {
                         key={car.url}
                         url={car.url}
                         brand={car.brand}
-                        type={car.type}
+                        rate={car.rate}
                         price={car.price}
                         text={car.text}
                         sale={car.sale}

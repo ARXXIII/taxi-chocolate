@@ -11,7 +11,7 @@ const Car = ({ params }: CarPageProps) => {
     const [text, setText] = useState<string>('')
     const [sale, setSale] = useState<boolean>(false)
 
-    const car_url = params.car
+    const CAR_URL = params.car
 
     const carPageList = [
         {
@@ -24,9 +24,9 @@ const Car = ({ params }: CarPageProps) => {
         }
     ]
 
-    const fetchData = async (car_url: string) => {
+    const fetchData = async (car: string) => {
         try {
-            const response = await fetch(`/api/cars/${car_url}`)
+            const response = await fetch(`/api/cars/${car}`)
 
             if (response) {
                 const data = await response.json()
@@ -44,7 +44,7 @@ const Car = ({ params }: CarPageProps) => {
     }
 
     useEffect(() => {
-        if (car_url) fetchData(car_url)
+        if (CAR_URL) fetchData(CAR_URL)
     }, [])
 
     return (
@@ -70,7 +70,7 @@ const Car = ({ params }: CarPageProps) => {
 
                 {text
                     ? (
-                        <p className='lg:w-[850px] p-3 text-xl lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
+                        <p className='p-3 text-center text-xl lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
                     )
                     : null
                 }

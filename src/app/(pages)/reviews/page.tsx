@@ -1,9 +1,9 @@
 import { reviews } from '@/app/constants'
-import { Feedback, PageHeading, ReviewForm } from '@/app/components'
+import { ContactForm, Feedback, PageHeading, ReviewForm } from '@/app/components'
 
 const Reviews = () => {
     return (
-        <article className='flex flex-col items-center gap-y-6 lg:gap-y-12'>
+        <article className='flex flex-col items-center gap-y-6'>
             <section className='lg:w-full'>
                 <PageHeading heading='Отзывы' />
             </section>
@@ -17,8 +17,9 @@ const Reviews = () => {
                 )
                 : (null)}
 
-            <section className='w-full lg:w-fit'>
+            <section className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
                 <ReviewForm />
+                <ContactForm />
             </section>
         </article>
     )
