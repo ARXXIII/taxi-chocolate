@@ -1,7 +1,9 @@
-import { ransomCars } from "@/app/constants"
+import { taxiPark } from "@/app/constants"
 import { CarCard, Info, List, PageHeading } from "@/app/components"
 
 const Ransom = () => {
+    const ransomCars = taxiPark.filter((car) => car.ransom)
+
     const ransomPageList = [
         {
             title: 'Преимущества выкупа',
@@ -67,15 +69,16 @@ const Ransom = () => {
             <section className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
                 {ransomCars.map((car, index) => (
-                    <CarCard
-                        key={index}
-                        brand={car.brand}
-                        price={car.price}
-                        type={car.type}
-                        contribution={car.contribution}
-                        term={car.term}
-                        ransom={true}
-                    />
+                    car.ransom?.terms.map((term) => (
+                        <CarCard
+                            key={index}
+                            brand={car.brand}
+                            price={term.price}
+                            rate={car.rate}
+                            ransom={car.ransom}
+                            contribution={term.contribution}
+                        />
+                    ))
                 ))}
 
             </section>
