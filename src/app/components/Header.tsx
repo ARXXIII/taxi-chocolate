@@ -1,8 +1,7 @@
 import Link from "next/link"
-import Image from "next/image"
-
-import Logo from '/public/cropped-cropped-cropped-favicon-taxi-shokolad-webp.webp'
 import Navbar from "./Navbar"
+import Image from "next/image"
+import Logo from '/public/cropped-cropped-cropped-favicon-taxi-shokolad-webp.webp'
 
 const Header = () => {
     return (
