@@ -27,8 +27,6 @@ const ContactForm = () => {
 
             return
         }
-
-        console.log(fullName, tel)
     }
 
     return (
