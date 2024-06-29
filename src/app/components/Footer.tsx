@@ -6,7 +6,7 @@ const Footer = () => {
         <footer>
             <section className="flex justify-between items-center gap-x-12">
                 <div>
-                    <h2 className="font-bold uppercase">version</h2>
+                    <h2 className="font-bold uppercase">версия</h2>
                     <p className="mt-3 text-xl">2024 Edition</p>
                 </div>
                 <div>
