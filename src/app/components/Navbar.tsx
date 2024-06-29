@@ -19,28 +19,32 @@ const Navbar = () => {
 
     useEffect(() => {
         checkIsMobile(width.width)
-    }, [])
+    }, [width.width])
 
     return (
         <>
             <nav>
+
                 {isMobile ? (
                     <section className="absolute top-0 right-0">
-                        <Menu
-                            right
-                        >
+                        <Menu right>
+
                             {nav.map((link) => (
                                 <Link key={link.name} href={link.address} className="mt-6 text-xl">{link.name}</Link>
                             ))}
+
                         </Menu>
                     </section>
                 ) : (
                     <section className="hidden lg:flex justify-center items-center gap-x-6 p-3 font-bold text-2xl bg-gradient-to-r from-dark-chocolate via-chocolate to-taxi text-transparent bg-clip-text rounded-full">
+
                         {nav.map((link) => (
                             <Link key={link.name} href={link.address}>{link.name}</Link>
                         ))}
+
                     </section>
                 )}
+
             </nav>
         </>
     )
