@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils"
 import { useState } from "react"
 
 const ReviewForm = () => {
-    const [name, setName] = useState('')
-    const [review, setReview] = useState('')
+    const [name, setName] = useState<string>('')
+    const [review, setReview] = useState<string>('')
     const [inputError, setInputError] = useState<string>()
 
     const send = () => {
@@ -24,9 +24,8 @@ const ReviewForm = () => {
 
             return
         }
-
-        console.log(name, review)
     }
+
     return (
         <form className="p-3 lg:p-6 lg:min-w-0 bg-dark-chocolate rounded-xl shadow">
             <h1 className='text-center font-bold text-4xl text-taxi tracking-wide'>Оставьте отзыв!</h1>
