@@ -51,3 +51,18 @@ export interface InfoProps {
 	subList?: string[];
 	tel?: string;
 }
+
+interface NavTypes {
+	name: string;
+	address: string;
+}
+
+export interface NavProps {
+	data: NavTypes[];
+}
+
+export interface MobileNavProps {
+	data: NavTypes[];
+	isOpen: boolean;
+	onClose: () => void;
+}
