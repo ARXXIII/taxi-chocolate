@@ -66,7 +66,7 @@ const Ransom = () => {
                 ))}
 
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <section className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
 
                 {ransomCars.map((car, index) => (
                     car.ransom?.terms.map((term) => (
@@ -74,7 +74,7 @@ const Ransom = () => {
                             key={index}
                             brand={car.brand}
                             price={term.price}
-                            rate={car.rate}
+                            rate={car.rateDescription}
                             ransom={car.ransom}
                             contribution={term.contribution}
                         />

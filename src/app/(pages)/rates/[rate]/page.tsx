@@ -26,8 +26,6 @@ const Rate = ({ params }: RatePageProps) => {
             if (response) {
                 const data = await response.json()
 
-                console.log(data)
-
                 setCars(data)
                 setRate(data[0].rateDescription)
             }
@@ -51,7 +49,7 @@ const Rate = ({ params }: RatePageProps) => {
                 }
 
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <section className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
 
                 {cars?.map((car, index) => (
                     <CarCard
