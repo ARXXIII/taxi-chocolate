@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${nunito.className} p-3 lg:px-24 lg:py-12 bg-neutral-200/60`}>
         <Header />
-        <main className="my-12">
+        <main className="my-6 lg:my-12">
           {children}
         </main>
         <Footer />
