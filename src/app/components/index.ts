@@ -8,6 +8,7 @@ import Footer from './Footer';
 import CarCard from './CarCard';
 import RateCard from './RateCard';
 import Feedback from './Feedback';
+import MobileNav from './MobileNav';
 import ReviewForm from './ReviewForm';
 import ContactForm from './ContactForm';
 import PageHeading from './PageHeading';
@@ -24,6 +25,7 @@ export {
 	CarCard,
 	RateCard,
 	Feedback,
+	MobileNav,
 	ReviewForm,
 	ContactForm,
 	PageHeading,
