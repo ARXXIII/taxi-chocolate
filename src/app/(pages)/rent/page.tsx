@@ -12,7 +12,7 @@ const Rent = () => {
     return (
         <article className='grid grid-cols-1 gap-y-6'>
             <section className='lg:w-full'>
-                <PageHeading heading="Аренда авто для работы такси" />
+                <PageHeading heading="Аренда авто для работы в такси" />
             </section>
             <section>
                 <Sale sale={true} price={1300} />

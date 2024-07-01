@@ -5,7 +5,7 @@ const Rates = () => {
     return (
         <article className='grid grid-cols-1 gap-y-6'>
             <section className='lg:w-full'>
-                <PageHeading heading="Тарифы" />
+                <PageHeading heading="Тарифы аренды" />
             </section>
             <section className="grid grid-cols-1 gap-6">
 

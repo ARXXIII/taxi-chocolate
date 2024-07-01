@@ -57,7 +57,7 @@ const Ransom = () => {
     return (
         <article className='grid grid-cols-1 gap-y-6'>
             <section className='lg:w-full'>
-                <PageHeading heading="Выкуп" />
+                <PageHeading heading="Аренда автомобилей с правом выкупа" />
             </section>
             <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
