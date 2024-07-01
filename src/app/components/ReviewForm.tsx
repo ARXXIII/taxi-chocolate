@@ -28,8 +28,8 @@ const ReviewForm = () => {
 
     return (
         <form className="p-3 lg:p-6 lg:min-w-0 bg-dark-chocolate rounded-xl shadow">
-            <h1 className='text-center font-bold text-4xl text-taxi tracking-wide'>Оставьте отзыв!</h1>
-            <div className="flex flex-col gap-y-6 text-2xl mt-6">
+            <h1 className="text-center font-bold text-xl lg:text-3xl text-taxi tracking-wide">Оставьте отзыв!</h1>
+            <div className="flex flex-col gap-y-3 lg:gap-y-6 text-2xl mt-6">
                 <input
                     type="text"
                     placeholder="Введите имя"
