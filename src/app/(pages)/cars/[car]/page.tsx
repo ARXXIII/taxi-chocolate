@@ -45,11 +45,11 @@ const Car = ({ params }: CarPageProps) => {
 
     useEffect(() => {
         if (CAR_URL) fetchData(CAR_URL)
-    }, [])
+    }, [CAR_URL])
 
     return (
         <article className='grid grid-cols-1 gap-6'>
-            <section className='flex justify-between items-center'>
+            <section className='flex flex-col lg:flex-row justify-between items-center gap-6'>
 
                 {brand
                     ? (
@@ -59,7 +59,7 @@ const Car = ({ params }: CarPageProps) => {
                 }
 
                 {sale
-                    ? (<div className='flex justify-center items-center p-3 font-bold text-4xl text-neutral-100 tracking-wide bg-red-600 rounded-xl shadow'>
+                    ? (<div className='flex justify-center items-center w-full lg:w-fit p-3 font-bold text-4xl text-neutral-100 tracking-wide bg-red-600 rounded-xl shadow'>
                         <p>Акция</p>
                     </div>)
                     : null
@@ -70,7 +70,7 @@ const Car = ({ params }: CarPageProps) => {
 
                 {text
                     ? (
-                        <p className='p-3 text-center text-xl lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
+                        <p className='p-3 text-center text-lg lg:text-2xl text-neutral-100 tracking-wide leading-relaxed bg-dark-chocolate rounded-xl shadow'>{text}</p>
                     )
                     : null
                 }
