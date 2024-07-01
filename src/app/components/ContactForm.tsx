@@ -43,7 +43,7 @@ const ContactForm = () => {
                     autoComplete="given-name"
                     required
                     onChange={(e) => setFullName(e.target.value)}
-                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi rounded-none bg-transparent duration-200 ease-in"
+                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in"
                 />
                 <input
                     type="tel"
@@ -53,7 +53,7 @@ const ContactForm = () => {
                     ref={inputRef}
                     required
                     onChange={(e) => setTel(e.target.value)}
-                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi rounded-none bg-transparent duration-200 ease-in"
+                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in"
                 />
             </section>
             <button

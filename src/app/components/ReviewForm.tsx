@@ -36,7 +36,7 @@ const ReviewForm = () => {
                     autoComplete="given-name"
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    className="p-3 text-2xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in"
+                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in"
                 />
                 <textarea
                     placeholder="Ваш отзыв"
@@ -45,13 +45,13 @@ const ReviewForm = () => {
                     rows={5}
                     value={review}
                     onChange={e => setReview(e.target.value)}
-                    className="p-3 text-2xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in resize-none"
+                    className="px-3 py-1 text-lg lg:text-xl text-neutral-100 border-b-2 border-neutral-100 focus:border-taxi bg-transparent duration-200 ease-in resize-none"
                 />
             </div>
             <button
                 onClick={send}
                 type="button"
-                className={cn("mt-6 p-3 w-full text-center font-bold text-2xl bg-taxi rounded-xl active:scale-[0.96] duration-200 ease-in shadow",
+                className={cn("p-3 w-full text-center font-bold text-xl lg:text-2xl bg-taxi rounded-lg active:scale-[0.96] duration-200 ease-in shadow",
                     inputError?.length && 'text-neutral-100 bg-rose-500'
                 )}
             >
