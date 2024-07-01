@@ -14,8 +14,10 @@ const Contact = () => {
                 ))}
 
             </section>
-            <section className='flex justify-center items-center'>
-                <ContactForm />
+            <section className="flex justify-center items-center">
+                <div className="lg:max-w-[800px]">
+                    <ContactForm />
+                </div>
             </section>
         </article>
     )
