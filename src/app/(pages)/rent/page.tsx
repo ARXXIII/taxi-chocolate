@@ -11,11 +11,11 @@ const Rent = () => {
 
     return (
         <article className='grid grid-cols-1 gap-y-6'>
-            <section>
-                <Sale sale={true} price={1300} />
-            </section>
             <section className='lg:w-full'>
                 <PageHeading heading="Аренда авто для работы такси" />
+            </section>
+            <section>
+                <Sale sale={true} price={1300} />
             </section>
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-3 lg:gap-x-6">
                 <List title="Преимущества таксопарка" list={advantages} />
@@ -28,14 +28,14 @@ const Rent = () => {
                 <div>
                     <List title="Требования для аренды" list={rentPageList} />
                 </div>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
 
                     {taxiPark.map((car) => (
                         <CarCard
                             key={car.url}
                             url={car.url}
                             brand={car.brand}
-                            rate={car.rate}
+                            rate={car.rateDescription}
                             price={car.price}
                             text={car.text}
                             sale={car.sale}

@@ -82,7 +82,7 @@ const Ransom = () => {
                 ))}
 
             </section>
-            <section className="grid grid-cols-1 gap-y-6">
+            <section className="grid grid-cols-1 gap-y-3 lg:gap-y-6">
 
                 {ransomInfo.map((info, index) => (
                     <Info key={index} title={info.title} subTitle={info.subTitle} list={info.list} subList={info.subList} />

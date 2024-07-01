@@ -3,28 +3,26 @@ import { InfoProps } from '../types'
 const Info = ({ title, list, subTitle, subList }: InfoProps) => {
     return (
         <div className='flex flex-col gap-y-3'>
-            <h1 className="p-3 text-center font-bold text-2xl lg:text-4xl text-taxi tracking-wide bg-dark-chocolate rounded-xl shadow">{title}</h1>
+            <h1 className="p-3 text-center font-bold text-xl lg:text-4xl text-taxi tracking-wide bg-dark-chocolate rounded-xl shadow">{title}</h1>
             <div className="grid grid-cols-1 gap-y-3 text-xl">
 
                 {list?.map((info, index) => (
-                    <p key={index} className="leading-relaxed">{info}</p>
+                    <p key={index} className="text-lg lg:text-xl leading-relaxed">{info}</p>
                 ))}
 
                 {subTitle
                     ? (
                         <div className="grid grid-cols-1 gap-y-3">
-                            <p>{subTitle}</p>
-                            <ul className="leading-relaxed">
+                            <p className='text-lg lg:text-2xl'>{subTitle}</p>
+                            <ul className="text-base lg:text-xl leading-relaxed space-y-3">
+
                                 {subList?.map((item, index) => (
                                     <li key={index}>
                                         <span className='mr-3'>{index + 1}.</span>
                                         {item}
-
                                     </li>
                                 ))}
-                                <li>
 
-                                </li>
                             </ul>
                         </div>
                     )

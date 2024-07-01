@@ -40,14 +40,14 @@ const Help = () => {
                     {questionsAnswers.map((item, index) => (
                         <Accordion key={index} type="single" collapsible>
                             <AccordionItem value={`item-${index}`}>
-                                <AccordionTrigger className="text-2xl">{item.question}</AccordionTrigger>
+                                <AccordionTrigger className="text-left text-lg lg:text-2xl">{item.question}</AccordionTrigger>
                                 <AccordionContent className="flex flex-col gap-y-3 text-xl">
 
                                     {item.answers.map((answer, index) => (
-                                        <p key={index} className="leading-relaxed">{answer}</p>
+                                        <p key={index} className="text-base lg:text-lg leading-relaxed">{answer}</p>
                                     ))}
 
-                                    {item.link ? (<a href={item.link} target="_blanc" className="p-3 w-fit text-taxi bg-dark-chocolate rounded-xl">{item.linkTitle}</a>) : null}
+                                    {item.link ? (<a href={item.link} target="_blanc" className="p-3 w-fit text-base lg:text-lg text-taxi bg-dark-chocolate rounded-xl">{item.linkTitle}</a>) : null}
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
@@ -56,7 +56,9 @@ const Help = () => {
                 </div>
             </section>
             <section className="flex justify-center items-center">
-                <ContactForm />
+                <div className="lg:max-w-[800px]">
+                    <ContactForm />
+                </div>
             </section>
         </article>
     )
