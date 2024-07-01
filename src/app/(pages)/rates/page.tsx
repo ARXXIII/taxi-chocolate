@@ -8,9 +8,11 @@ const Rates = () => {
                 <PageHeading heading="Тарифы" />
             </section>
             <section className="grid grid-cols-1 gap-6">
+
                 {rates.map((rate) => (
                     <RateCard key={rate.url} url={rate.url} rate={rate.rate} description={rate.description} />
                 ))}
+
             </section>
         </article>
     )
